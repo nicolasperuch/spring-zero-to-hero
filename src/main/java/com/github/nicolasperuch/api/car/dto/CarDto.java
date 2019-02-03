@@ -1,12 +1,18 @@
 package com.github.nicolasperuch.api.car.dto;
 
+import javax.validation.constraints.NotNull;
 
 public class CarDto {
 
+    @NotNull(message = "Your car must have a brand")
     private String brand;
+    @NotNull(message = "Your car must have a price")
     private Long price;
+    @NotNull(message = "Your car must have a fuel comsuption information")
     private String fuelConsumption;
+    @NotNull(message = "You must insert an engine type information")
     private String engineType;
+    @NotNull(message = "Your car must have a size")
     private String size;
 
     public String getBrand() {
